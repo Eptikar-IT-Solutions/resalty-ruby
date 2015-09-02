@@ -1,0 +1,26 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: eptikarpay
+  pool: 5
+  username: root
+  password: 'mysqlkafka'
+  socket: /var/run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: eptikarpay-test
+  pool: 5
+  username: root
+  password: 'mysqlkafka'
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: eptikarpay
+  pool: 5
+  username: root
+  password: 'mysqlkafka'
+  socket: /var/run/mysqld/mysqld.sock
