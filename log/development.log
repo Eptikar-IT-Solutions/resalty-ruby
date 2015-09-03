@@ -1,0 +1,66 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMessages (20150830065404)
+  [1m[35m (24.3ms)[0m  CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageID` varchar(255), `number` varchar(255), `msg` varchar(255), `status_number` int(11)) ENGINE=InnoDB
+Mysql2::Error: Table 'messages' already exists: CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageID` varchar(255), `number` varchar(255), `msg` varchar(255), `status_number` int(11)) ENGINE=InnoDB
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMessages (20150830065734)
+  [1m[35m (0.7ms)[0m  CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+Mysql2::Error: Table 'messages' already exists: CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMessages (20150830065734)
+  [1m[35m (0.6ms)[0m  CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+Mysql2::Error: Table 'messages' already exists: CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+  [1m[36m (176.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (233.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMessages (20150830065734)
+  [1m[35m (103.1ms)[0m  CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150830065734')
+  [1m[36m (62.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eptikarpay'
+  AND fk.table_name = 'messages'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `messages`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (39.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eptikarpay'
+  AND fk.table_name = 'messages'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `messages`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMessages (20150830140532)
+  [1m[35m (0.7ms)[0m  CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+Mysql2::Error: Table 'messages' already exists: CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+  [1m[36m (165.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (244.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (13.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateMessages (20150830140532)
+  [1m[35m (100.9ms)[0m  CREATE TABLE `messages` (`id` int(11) auto_increment PRIMARY KEY, `messageId` int(11), `number` varchar(255), `msg` text, `status_number` int(11)) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150830140532')
+  [1m[36m (65.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (6.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eptikarpay'
+  AND fk.table_name = 'messages'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `messages`
